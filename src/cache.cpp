@@ -35,6 +35,8 @@ fs::path get_cache_directory() {
                 "can't get home directory. you have no home directory or your OS is not supported",
                 std::make_error_code(std::errc::no_such_file_or_directory));
     }
+
+    // make cache directory path
     fs::path cache_directory = home_directory;
     cache_directory.append(cache_root_name);
     cache_directory.append("glslc-p");
