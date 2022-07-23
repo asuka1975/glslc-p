@@ -7,4 +7,5 @@ set(CMAKE_CXX_FLAGS "-std=c++11 -Wall -Wextra -pedantic")
 set(CMAKE_CXX_FLAGS_DEBUG "-g3 -O0 -pg")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2 -DNDEBUG")
 
-add_executable(glslc_p main.cpp)
+add_executable(glslc_p main.cpp include/cache.h src/cache.cpp)
+target_include_directories(glslc_p PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
